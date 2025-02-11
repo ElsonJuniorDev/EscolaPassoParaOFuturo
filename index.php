@@ -32,7 +32,7 @@ session_start(); // Inicia a sessão para verificar se o usuário está logado
                  <a href="perfil.php">Acessar meu perfil</a>
                  <a href="logout.php">Sair</a>
                 <?php else: ?>
-                 <a href="login.php" > <i class="ri-login-box-line"></i></i>Login</a>
+                 <a href="src/login.php" > <i class="ri-login-box-line"></i></i>Login</a>
                  <samp>|</samp>
                  <a href="src/cadastro.php"><i class="ri-user-add-line"></i>Criar conta</a>            
                 <?php endif; ?>
