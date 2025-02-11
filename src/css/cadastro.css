@@ -1,0 +1,33 @@
+.bg-main-cadastro {
+  background-color: var(--SECUNDARY_BLUE);
+  min-width: fit-content;
+}
+.headerCadastro {
+  display: flex;
+}
+.containerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: fit-content;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+form p {
+  color: var(--PRIMARY_BLACK);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+form a {
+  color: var(--PRIMARY_BLUE);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}

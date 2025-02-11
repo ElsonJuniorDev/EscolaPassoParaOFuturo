@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function verificarTamanho(input, label, originalText, minLength) {
     if (input.value.length < minLength) {
-      label.style.color = "red";
+      label.style.color = "#FA2CCD";
       label.innerHTML = `${originalText} - Mínimo de ${minLength} caracteres`;
       return false;
     } else {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!regex.test(email)) {
-      label.style.color = "red";
+      label.style.color = "#FA2CCD";
       label.innerHTML = `${originalText} - E-mail inválido`;
       return false;
     } else {
@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
       erros.push("1 caractere especial");
 
     if (erros.length > 0) {
-      label.style.color = "red";
+      label.style.color = "#FA2CCD";
       label.innerHTML = `${originalText} - ${erros.join(", ")}`;
       return false;
     } else {
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let label = document.getElementById("labelconfirmarSenha");
 
     if (confirmarSenha !== senha || confirmarSenha.length === 0) {
-      label.style.color = "red";
+      label.style.color = "#FA2CCD";
       label.innerHTML = "Confirmar Senha - Senhas não coincidem";
       validacoes.confirmarSenha = false;
     } else {
@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  async function hashSenha(senha) {
+  async function hashSenha(senha) {  //Função para criptografar a senha
     const encoder = new TextEncoder();
     const data = encoder.encode(senha);
     const hashBuffer = await crypto.subtle.digest("SHA-256", data);
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
       nome,
       sobrenome,
       email,
-      senha: senhaCriptografada, // Agora a senha está segura!
+      senha: senhaCriptografada, 
     };
 
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+//Validaçoes dos inputs
   setupInputValidation("nome", "labelNome", 3);
   setupInputValidation("sobrenome", "labelSobrenome", 5);
   setupInputValidation("email", "labelEmail", 5, validarEmail);

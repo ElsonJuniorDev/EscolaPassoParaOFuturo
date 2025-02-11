@@ -1,0 +1,54 @@
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem 0 1rem;
+  width: 100%;
+}
+.ContainerNav {
+  display: flex;
+  align-items: center;
+
+  color: var(--PRIMARY_BLUE);
+}
+.containerLogo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.containerLogo img {
+  width: 71px;
+  height: 64px;
+}
+.containerLogo h2 {
+  font-size: 1rem;
+  margin-bottom: -8px;
+}
+.containerLogo P {
+  color: var(--PRIMARY_BLUE);
+  font-weight: 700;
+  font-size: 0.55rem;
+}
+.ContainerLoginCadastro ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.ContainerLoginCadastro a {
+  font-family: Poppins, sans-serif;
+  color: var(--PRIMARY_BLUE);
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-left: 5px;
+}
+
+.ContainerMenu {
+  color: var(--PRIMARY_BLUE);
+  padding-left: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
